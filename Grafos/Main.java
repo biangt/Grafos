@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         try {
@@ -22,6 +24,12 @@ public class Main {
 
             // Mostrar la matriz de adyacencia con pesos
             grafo.imprimirMatrizConEncabezados();
+
+            Scanner leer = new Scanner(System.in);
+            System.out.print("\nIngrese el nombre del vértice a buscar: ");
+            String entrada = leer.nextLine();
+            grafo.buscarVertice(entrada);
+            leer.close();
 
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());// Muestra errores si hay vértices inexistentes

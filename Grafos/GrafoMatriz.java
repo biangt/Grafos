@@ -96,4 +96,13 @@ public class GrafoMatriz {
             System.out.println();
         }
     }
+
+    public void buscarVertice(String nombre) {
+        int pos = numVertice(nombre);
+        if (pos >= 0) {
+            System.out.println("Vértice encontrado: " + verts[pos]);
+        } else {
+            System.out.println("Vértice no encontrado: " + nombre);
+        }
+    }
 }
